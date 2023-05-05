@@ -21,8 +21,10 @@ Route::get('/', function () {
 });
 
 Route::post('login', [AuthController::class, 'login']);
+Route::get('logout', [AuthController::class, 'logout'])->name('logout');
 Route::get('register', [AuthController::class, 'register']);
 Route::get('homeuser', [UserController::class, 'index'])->name('homeuser');
+Route::get('listuser', [UserController::class, 'listuser'])->name('listuser');
 
 // Route::group(['middleware' => 'jwt.auth'], function () {
 //     Route::get('user', function (Request $request) {
